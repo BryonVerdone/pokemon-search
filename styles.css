@@ -23,6 +23,7 @@ h1 {
 .content {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 header {
   display: flex;
