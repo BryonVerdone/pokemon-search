@@ -1,5 +1,6 @@
 function getPokemon() {
-  fetch('https://pokeapi.co/api/v2/pokemon/clefairy/')
+  const inputValue = document.getElementById('input').value;
+  fetch(`https://pokeapi.co/api/v2/pokemon/${inputValue}/`)
     .then((res) => res.json()) // parse response as JSON
     .then((data) => {
       console.log(data.name);
