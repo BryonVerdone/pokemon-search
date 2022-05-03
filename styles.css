@@ -53,3 +53,12 @@ input {
   flex-direction: column;
   align-items: center;
 }
+
+#pokemon-img {
+  width: 200px;
+  transition: 3000ms;
+}
+#name {
+  text-transform: capitalize;
+  font-size: 2rem;
+}

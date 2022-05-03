@@ -1,5 +1,5 @@
 function getPokemon() {
-  const inputValue = document.getElementById('input').value;
+  const inputValue = document.getElementById('input').value.toLowerCase();
   fetch(`https://pokeapi.co/api/v2/pokemon/${inputValue}/`)
     .then((res) => res.json()) // parse response as JSON
     .then((data) => {
@@ -7,8 +7,13 @@ function getPokemon() {
 
       function displayInfo(pokemon) {
         const pokemonName = document.getElementById('name');
+        const pokemonImg = document.getElementById('pokemon-img');
         pokemonName.textContent = data.name;
+        pokemonImg.src = data.sprites.front_default;
+        console.log(data.sprites.front_default);
+        console.log(pokemonImg);
       }
+
       displayInfo();
     })
 
