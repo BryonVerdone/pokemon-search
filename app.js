@@ -5,7 +5,7 @@ function getPokemon() {
     .then((data) => {
       console.log(data.name);
 
-      function displayInfo(pokemon) {
+      function displayInfo() {
         const pokemonName = document.getElementById('name');
         const pokemonImg = document.getElementById('pokemon-img');
         pokemonName.textContent = data.name;
@@ -19,6 +19,7 @@ function getPokemon() {
 
     .catch((err) => {
       console.log(`error ${err}`);
+      alert('Enter a vaild pokemon name CHECK YOUR SPELLING');
     });
 }
 
